@@ -24,13 +24,13 @@ public class Main {
         }
         int maxSum=MIN_VALUE;
 
-        for(int i=0;i<n-k+1;i++){
+        for(int i=0;i<n-k+1;i++){   //윈도우 개수는 n-k개
             int localSum=0;
-            for(int j=0;j<k;j++){
-                window[j]=tempArr[i+j];
-                localSum+=window[j];
+            for(int j=0;j<k;j++){   
+                window[j]=tempArr[i+j];   //윈도우에 값 할당
+                localSum+=window[j];      //윈도우 합 구하기
             }
-            if(localSum>maxSum) maxSum=localSum;
+            if(localSum>maxSum) maxSum=localSum;   //최댓값 갱신
 
         }
 
